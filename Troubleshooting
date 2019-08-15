@@ -1,5 +1,18 @@
-QuickLinks
+QuickLinks:
+==========
 https://danielmiessler.com/study/tcpdump/
 https://www.thegeekstuff.com/scripts/iptables-rules
 https://docs.netgate.com/pfsense/en/latest/vpn/ipsec/ipsec-troubleshooting.html
 https://www.kalitut.com/2019/04/wireshark-filters.html
+
+Tips:
+==========
+Support access XG
+-------
+opcode apiInterface -s nosync -t json -b '{"Event":"UPDATE","lifetime_duration":"1month","Entity":"supportaccesssettings","___serverprotocol":"HTTP","APIVersion":"1701.1","isenable":"1","___username":"admin",
+"___serverip":"10.198.67.109","___serverport":4444,"___component":"GUI","mode":1739}'
+-------
+Verify:
+-------
+psql -U nobody -d corporate -c "select * from tblsupportaccess"
+==========
